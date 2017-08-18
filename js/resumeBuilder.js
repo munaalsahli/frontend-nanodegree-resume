@@ -70,8 +70,6 @@ var projects = {
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
 	var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
 
-  /* top and footer contacts */
-
 	var formattedContactInfo = [];
 	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.Mobile));
 	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.Email));
@@ -82,7 +80,7 @@ var projects = {
 	$("#header").append(formattedPic);
 	$("#header").append(formattedWelcome);
 
-  /* for loop */
+
 
 	if(bio.skills.length > 0) {
 		$("#header").append(HTMLskillsStart);
@@ -98,6 +96,7 @@ var projects = {
 	}
  }
 
+
  bio.display();
 
  work.display = function() {
@@ -110,10 +109,11 @@ var projects = {
 		$(".work-entry:last").append(formattedEmployerTitle);
 		var formattedYears = HTMLworkDates.replace("%data%",job.date);
 		$(".work-entry:last").append(formattedYears);
-		var formattedCity = HTMLworkLocation.replace("%data%",job.location);
-		$(".work-entry:last").append(formattedCity);
 		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
 		$(".work-entry:last").append(formattedDescription);
+		var formattedCity = HTMLworkLocation.replace("%data%",job.location);
+		$(".work-entry:last").append(formattedCity);
+
 	});
  }
 
@@ -123,17 +123,17 @@ var projects = {
 	education.schools.forEach(function(school) {
 		$("#education").append(HTMLschoolStart);
 
-
 		var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
+		var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
+		$(".education-entry:last").append(formattedLocation);
+		var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
+		$(".education-entry:last").append(formattedMajor);
 		var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
 		var formattedNameDegree = formattedSchoolName + formattedDegree;
 		$(".education-entry:last").append(formattedNameDegree);
 		var formattedSchoolDate = HTMLschoolDates.replace("%data%", school.date);
 		$(".education-entry:last").append(formattedSchoolDate);
-		var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
-		$(".education-entry:last").append(formattedMajor);
-		var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
-		$(".education-entry:last").append(formattedLocation);
+
 
 	});
 
