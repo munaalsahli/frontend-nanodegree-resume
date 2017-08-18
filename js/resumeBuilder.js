@@ -107,13 +107,13 @@ var projects = {
 		var formattedEmployer = HTMLworkEmployer.replace("%data%",job.employer);
 		var formattedTitle = HTMLworkTitle.replace("%data%",job.title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
-		$(".work-entry").append(formattedEmployerTitle);
+		$(".work-entry:last").append(formattedEmployerTitle);
 		var formattedYears = HTMLworkDates.replace("%data%",job.date);
-		$(".work-entry").append(formattedYears);
+		$(".work-entry:last").append(formattedYears);
 		var formattedCity = HTMLworkLocation.replace("%data%",job.location);
-		$(".work-entry").append(formattedCity);
+		$(".work-entry:last").append(formattedCity);
 		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
-		$(".work-entry").append(formattedDescription);
+		$(".work-entry:last").append(formattedDescription);
 	});
  }
 
@@ -161,11 +161,11 @@ var projects = {
 		$("#projects").append(HTMLprojectStart);
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", p.title);
-		$(".project-entry").append(formattedProjectTitle);
+		$(".project-entry:last").append(formattedProjectTitle);
 		var formattedProjectDate = HTMLprojectDates.replace("%data%", p.date);
-		$(".project-entry").append(formattedProjectDate);
+		$(".project-entry:last").append(formattedProjectDate);
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", p.description);
-		$(".project-entry").append(formattedProjectDescription);
+		$(".project-entry:last").append(formattedProjectDescription);
 
 	});
  }
