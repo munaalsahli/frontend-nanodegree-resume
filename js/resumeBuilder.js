@@ -4,15 +4,16 @@ var bio = {
 	"role" : "Web Developer",
 	"contacts" :
   {
-    "Email" : "monamuhammed70@gmail.com",
-	 "Mobile" : "559655925",
-	 "Github" : "https://github.com/munaalsahli",
-	 "location" : ["Riyadh"]
+    "email" : "monamuhammed70@gmail.com",
+	 "mobile" : "559655925",
+	 "github" : "https://github.com/munaalsahli",
+	 "location" : "Riyadh"
  },
 	"WelcomeMessage" : "Welcome To Muna's Resume",
 	"skills" : ["HTML" , "C++", "JAVA", "C#", "Matlab", "SQL/PLSQL"],
-	"bioPic" : "http://www.io42.co.uk/images/AimeeTacchi.jpg"
+	"biopic" : "http://www.io42.co.uk/images/AimeeTacchi.jpg"
 };
+
 
 
 var education = {
@@ -22,7 +23,7 @@ var education = {
 			"location" : ["Riyadh"],
 			"degree" : "Bachelor",
 			"majors" : "computer science",
-			"date" : "2010-2015",
+			"dates" : "2010-2015",
 			"url" :  ""
 		}
 
@@ -31,20 +32,22 @@ var education = {
 	{
 		"title" : "Front End Nano Degree",
 		"school" : "Udacty",
-		"date" : "Jul,2017 -- Present",
+		"dates" : "Jul,2017 -- Present",
 		"url" : "www.Udacty.com"
 	}
 	]
 };
+
+
 
 var work = {
 	"jobs" : [
 		{
 			"employer" : "Tata Company ",
 			"title" : "Developer",
-			"date" : "DEC,2015 - Present",
+			"dates" : "DEC,2015 - Present",
 			"description": "Billing Configuration ",
-      "location": ["Riyadh"]
+      "location": "Riyadh"
 
     }
     ]
@@ -54,9 +57,9 @@ var projects = {
 	"projects" : [
 		{
 			"title" : "KFMC app",
-			"date" : "2015",
+			"dates" : "2015",
 			"description" : "I had work for KFMC applcation",
-      "location": ["Riyadh"]
+      "location": "Riyadh"
     }
 	]
 
@@ -68,12 +71,12 @@ var projects = {
 	var formattedJob = HTMLheaderRole.replace("%data%", bio.role);
 	var formattedNameRole = (formattedName + formattedJob);
 	var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
-	var formattedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+	var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 
 	var formattedContactInfo = [];
-	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.Mobile));
-	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.Email));
-	formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.Github));
+	formattedContactInfo.push(HTMLmobile.replace("%data%", bio.contacts.mobile));
+	formattedContactInfo.push(HTMLemail.replace("%data%", bio.contacts.email));
+	formattedContactInfo.push(HTMLgithub.replace("%data%", bio.contacts.github));
 	formattedContactInfo.push(HTMLlocation.replace("%data%", bio.contacts.location));
 
 	$("#header").prepend(formattedNameRole);
@@ -107,7 +110,7 @@ var projects = {
 		var formattedTitle = HTMLworkTitle.replace("%data%",job.title);
 		var formattedEmployerTitle = formattedEmployer + formattedTitle;
 		$(".work-entry:last").append(formattedEmployerTitle);
-		var formattedYears = HTMLworkDates.replace("%data%",job.date);
+		var formattedYears = HTMLworkDates.replace("%data%",job.dates);
 		$(".work-entry:last").append(formattedYears);
 		var formattedDescription = HTMLworkDescription.replace("%data%",job.description);
 		$(".work-entry:last").append(formattedDescription);
@@ -131,7 +134,7 @@ var projects = {
 		var formattedDegree = HTMLschoolDegree.replace("%data%",school.degree);
 		var formattedNameDegree = formattedSchoolName + formattedDegree;
 		$(".education-entry:last").append(formattedNameDegree);
-		var formattedSchoolDate = HTMLschoolDates.replace("%data%",school.date);
+		var formattedSchoolDate = HTMLschoolDates.replace("%data%",school.dates);
 		$(".education-entry:last").append(formattedSchoolDate);
 
 
@@ -146,7 +149,7 @@ var projects = {
 		var formattedSchool = HTMLonlineSchool.replace("%data%",internet.school);
 		var formattedTitleSchool = formattedTitle + formattedSchool;
 		$(".education-entry:last").append(formattedTitleSchool);
-		var formattedDate = HTMLonlineDates.replace("%data%",internet.date);
+		var formattedDate = HTMLonlineDates.replace("%data%",internet.dates);
 		$(".education-entry:last").append(formattedDate);
 		var formattedURL = HTMLonlineURL.replace("%data%",internet.url);
 		$(".education-entry:last").append(formattedURL);
@@ -162,7 +165,7 @@ var projects = {
 
 		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", p.title);
 		$(".project-entry:last").append(formattedProjectTitle);
-		var formattedProjectDate = HTMLprojectDates.replace("%data%", p.date);
+		var formattedProjectDate = HTMLprojectDates.replace("%data%", p.dates);
 		$(".project-entry:last").append(formattedProjectDate);
 		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", p.description);
 		$(".project-entry:last").append(formattedProjectDescription);

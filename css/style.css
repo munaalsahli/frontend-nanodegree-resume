@@ -1,221 +1,305 @@
-body,
-div,
-ul,
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
-}
 
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
+body, div, ul, li, p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+    font-family: "entypo", sans-serif;
+    color: #999;
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
-  line-height: 48px;
-  display: inline;
+    font-size: 40px;
+    line-height: 95px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 24px;
-  color: #999;
-  line-height: 29px;
-  padding: 10px;
+    font-weight: bold;
+    font-size: 26px;
+    color: #999;
+    line-height: 29px;
+    padding-top: 30px;
+    color:#999;
+    font-family: "Poiret One", cursive;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-size: 20px;
+    color: #999;
+    line-height: 22px;
+    font-family: "Poiret One";
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
-h2,
-h3,
-h4,
-h5 {
-  padding: 10px 5%;
+h2, h3, h4, h5 {
+    padding: 10px 5%;
 
 }
 
-
-.date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+h1, #name {
+    font-family: "Poiret One", cursive;
+    color: #fff;
+    font-size: 5em;
+    background-color: #ee6e80;
 }
 
-.location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+h1, #bio {
+    margin-left: 20px;
+    background-color: #e8d5b7;
+    color: #0e2430;
 }
+
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #999;
+    line-height: 21px;
 }
 
 a {
-  color: #1199c3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
+    color: #1199c3;
+    text-decoration: none;
+    display: block;
+    color: #ee6e73;
 }
 
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #f3f3f3;
-  line-height: 28px;
+li.flex-item a {
+    color: #fff
 }
 
-#skills-h3 {
-  color: #f5ae23;
-  display: none;
+span.white-text:hover {
+    color: gray;
 }
 
-.orange {
-  background-color: #f5ae23;
-}
-
-.orange-text {
-  color: #f5ae23;
-}
-
-.white-text {
-  font-weight: bold;
-  color: #fff;
-}
-
-.gray {
-  background-color: #f3f3f3;
-  padding-bottom: 10px;
-  clear: both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
+li.flex-item {
+    display: flex;
 }
 
 ul {
-  list-style-type: none;
-}
-
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+    list-style-type: none;
 }
 
 img {
-  padding: 10px;
+    width: 100%;
+    padding: 10px;
 }
 
 span {
-  padding: 5px;
+    padding: 5px;
+    color: #ad6430;
+    font-family: "Poiret One", cursive;
+}
+
+.clear-fix {
+    overflow: auto;
+}
+
+.white {
+    background-color: #fff;
+    clear: both;
+    padding-bottom: 15px;
+}
+
+.card {
+    border-color: #e0e0e0;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 6px;
+    margin: 1.5rem 2.8rem 2rem 3.8rem;
+    box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+    max-width: 348px;
+    max-height: 360px;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px 0 rgba(46, 61, 73, 0.12);
+}
+
+.education-entry, .work-entry, .project-entry {
+    padding: 6px 5%;
+}
+
+.work-entry, a {
+    color: #ee6e73;
+}
+
+.flex-item {
+    background-color: #ee6e73;
+}
+
+.date-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
+}
+
+.location-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
+}
+
+.welcome-message {
+    font-style: italic;
+    font-size: 1.5em;
+    line-height: 28px;
+    color: #f3f3f3;
+    padding-left: 35px;
+}
+
+.orange {
+    background-color: #ee6e73;
+}
+
+.greyList {
+    color: #eeeeee;
+    font-size: x-large;
+}
+
+.white-text {
+    color: #fff;
+    font-size: x-large;
+}
+
+.gray {
+    background-color: #f3f3f3;
+    clear: both;
+    padding-bottom: 15px;
+}
+
+.dark-gray {
+    background-color: #4a4a4a;
+}
+
+.flex-box, #skills-h3 {
+    background-color: #ee6e73;
+}
+
+.biopic {
+    float: right;
+    padding: 0px;
+    width: 150px;
+    display: none;
+    border-radius: 50%;
+}
+
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.center-content {
+    padding: 2.5% 5%;
+}
+
+#projects, #onlineEducation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#topContacts {
+    background-color: #ee6e73;
+
+}
+
+#skills-h3 {
+    color: #999;
+    display: none;
+    margin-left: -20px;
+    padding-top: 35px;
+}
+
+
+/* TODO: Replace with image later */
+
+#header {
+    background-color: #ee6e73;
+}
+
+#connect {
+    background-color: #ee6e73;
 }
 
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
+
+#lets-connect h2 {
+    color: #ee6e73;
+}
+
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    }
+    ;
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    }
+    ;
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+    .biopic {
+        width: 150px;
+    }
+    .welcome-message {
+        display: none;
+    }
+    #projects {
+      display: block;
+    }
 }
-
+@media only screen and (max-width: 375px) {
+    #email {
+      display: block;
+    }
+}
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
+    #skills-h3, .biopic {
+        display: block;
+    }
+    ;
 }
