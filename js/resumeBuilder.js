@@ -51,7 +51,10 @@ var projects = {
         "title": "KFMC app",
         "dates": "2015",
         "description": "I had work for KFMC applcation",
-        "location": "Riyadh"
+        "location": "Riyadh",
+        "images" : ["http://a1.mzstatic.com/us/r30/Purple19/v4/1e/1d/9f/1e1d9f97-6c0d-8038-5e92-a51d6cd231d8/screen696x696.jpeg"],
+
+
     }]
 
 };
@@ -159,6 +162,9 @@ projects.display = function() {
         $(".project-entry:last").append(formattedProjectDate);
         var formattedProjectDescription = HTMLprojectDescription.replace("%data%", p.description);
         $(".project-entry:last").append(formattedProjectDescription);
+        var formattedProjectImage = HTMLprojectImage.replace("%data%", p.images);
+        $(".project-entry:last").append(formattedProjectImage);
+
 
     });
 };
