@@ -134,7 +134,7 @@ education.display = function() {
                       HTMLschoolMajor.replace("%data%", major);
                       $(".education-entry:last").append(FormattedschoolMajor);
                   });
-                };
+                }
 
 });
     education.onlineCourses.forEach(function(internet) {
