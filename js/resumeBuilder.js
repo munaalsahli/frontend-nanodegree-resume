@@ -7,7 +7,7 @@ var bio = {
         "github": "https://github.com/munaalsahli",
         "location": "Riyadh"
     },
-    "WelcomeMessage": "Welcome To Muna's Resume",
+    "welcomeMessage": "Welcome To Muna's Resume",
     "skills": ["HTML", "C++", "JAVA", "C#", "Matlab", "SQL/PLSQL"],
     "biopic": "http://www.io42.co.uk/images/AimeeTacchi.jpg"
 };
@@ -17,9 +17,9 @@ var bio = {
 var education = {
     "schools": [{
             "name": "Princess Nora bint Abdurrahman University ",
-            "location": ["Riyadh"],
+            "location": "Riyadh",
             "degree": "Bachelor",
-            "majors": "computer science",
+            "majors": ["computer science"],
             "dates": "2010-2015",
             "url": ""
         }
@@ -64,7 +64,7 @@ bio.display = function() {
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedJob = HTMLheaderRole.replace("%data%", bio.role);
     var formattedNameRole = (formattedName + formattedJob);
-    var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.WelcomeMessage);
+    var formattedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
     var formattedPic = HTMLbioPic.replace("%data%", bio.biopic);
 
     var formattedContactInfo = [];
@@ -123,17 +123,20 @@ education.display = function() {
         var formattedSchoolName = HTMLschoolName.replace("%data%", school.name);
         var formattedLocation = HTMLschoolLocation.replace("%data%", school.location);
         $(".education-entry:last").append(formattedLocation);
-        var formattedMajor = HTMLschoolMajor.replace("%data%", school.majors);
-        $(".education-entry:last").append(formattedMajor);
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedNameDegree = formattedSchoolName + formattedDegree;
         $(".education-entry:last").append(formattedNameDegree);
         var formattedSchoolDate = HTMLschoolDates.replace("%data%", school.dates);
         $(".education-entry:last").append(formattedSchoolDate);
+    if (school.majors.length > 0) {
+                  school.majors.forEach( function (major) {
+                      var FormattedschoolMajor =
+                      HTMLschoolMajor.replace("%data%", major);
+                      $(".education-entry:last").append(FormattedschoolMajor);
+                  });
+                };
 
-
-    });
-
+});
     education.onlineCourses.forEach(function(internet) {
 
         $("#education").append(HTMLonlineClasses);
